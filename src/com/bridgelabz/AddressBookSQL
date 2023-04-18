@@ -78,3 +78,22 @@ Output -> 17:03:24	select first_name from AddressBook where city ="Nanded" order
 
           'Anjali'
           'Apeksha'
+
+UC9 :- Ability to identify each Address Book with name and Type.
+SQL Query -> alter table AddressBook add address_book_name varchar(20) after last_name;
+alter table AddressBook add type varchar(20) after address_book_name;
+update AddressBook set address_book_name="Relation", type="Family"
+where first_name in("Pranjali");
+update AddressBook set address_book_name="friendsbook",type="Friend"
+where first_name in("Apeksha");
+select*from Addressbook;
+
+Output -> 17:15:43	update AddressBook set address_book_name="Relation", type="Family" where first_name in("Pranjali")	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.000 sec
+
+          17:18:00	update AddressBook set address_book_name="friendsbook",type="Friend" where first_name in("Apeksha")	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.000 sec
+
+           first_name last_name address_book_name   type        address         city    state       pincode  phone no    email
+           Anjali	  Rawke	    null                null        Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
+           Apeksha	  patil	    friendsbook         friend      Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
+           Pranjali	  Rawke	    relation            family      dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+
