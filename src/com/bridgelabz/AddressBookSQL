@@ -56,3 +56,10 @@ Output -> 16:40:06	delete from AddressBook where first_name="Rani"	1 row(s) affe
            Anjali	 Rawke	    Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
            Apeksha	 patil	    Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
            Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+
+UC6: Ability to Retrieve Person belonging to a City or State from the Address Book
+SQL Query -> select  first_name from AddressBook where city ="pune" and state ="Maharahstra";
+
+Output -> 16:49:32	select  first_name from AddressBook where city ="pune" and state ="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+
+          'Pranjali'
