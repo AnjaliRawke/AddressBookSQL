@@ -95,7 +95,7 @@ Output -> 17:15:43	update AddressBook set address_book_name="Relation", type="Fa
            first_name last_name address_book_name   type        address         city    state       pincode  phone no    email
            Anjali	  Rawke	    null                null        Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
            Apeksha	  patil	    friendsbook         Friend      Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
-           Pranjali	  Rawke	    relation            Family      dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+           Pranjali	  Rawke	    Relation            Family      dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
 
 UC10: Ability to get number of contact persons i.e. count by type
 SQL Query -> select count(type) from Addressbook where type="Family";
@@ -106,3 +106,20 @@ Output -> 17:38:47	select count(type) from Addressbook where type="Family" LIMIT
           17:38:47	select count(type) from Addressbook where type="Friend" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
 
           '1'
+
+UC11: Ability to add person to both Friend and Family
+SQL Query -> insert into AddressBook(first_name,last_name,address_book_name,type,address,city,state,zip,phone_number,email)value
+                                      ("Shubham","Shinde","phule Nagar","friendsbook","Friend","pune","Maharshtra",411019,945231685,"shubhamshinde@gmail.com"),
+                                      ("Aruna","Rawke","bhagwan nagar","Relation","Family","nanded","Maharahstra",431601,9422087822,"arunarawke1@gmail.com");
+select * from AddressBook;
+
+Output -> 17:50:15	insert into AddressBook(first_name,last_name,address_book_name,type,address,city,state,zip,phone_number,email)value                                       ("Shubham","Shinde","phule Nagar","friendsbook","Friend","pune","Maharshtra",411019,945231685,"shubhamshinde@gmail.com"),                                       ("Aruna","Rawke","bhagwan nagar","Relation","Family","nanded","Maharahstra",431601,9422087822,"arunarawke1@gmail.com")	2 row(s) affected Records: 2  Duplicates: 0  Warnings: 0	0.015 sec
+
+          17:50:19	select * from AddressBook LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
+
+           first_name last_name address_book_name   type        address         city    state       pincode  phone no    email
+           Anjali	  Rawke	    null                null        Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
+           Apeksha	  patil	    friendsbook         Friend      Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
+           Pranjali	  Rawke	    Relation            Family      dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+           Shubham    Shinde    friendsbook         Friend      phule nagar     pune    Maharshtra  411019   945231685  shubhamshinde@gmail.com
+           Aruna      Rawke     Relation            Family      bhagwan nagar   nanded  Maharahstra 431601   9422087822 arunarawke1@gmail.com
