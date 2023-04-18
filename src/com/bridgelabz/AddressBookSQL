@@ -123,3 +123,6 @@ Output -> 17:50:15	insert into AddressBook(first_name,last_name,address_book_nam
            Pranjali	  Rawke	    Relation            Family      dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
            Shubham    Shinde    friendsbook         Friend      phule nagar     pune    Maharshtra  411019   945231685  shubhamshinde@gmail.com
            Aruna      Rawke     Relation            Family      bhagwan nagar   nanded  Maharahstra 431601   9422087822 arunarawke1@gmail.com
+
+UC12: Draw the ER Diagram for Address Book Service DB
+Output -> 
