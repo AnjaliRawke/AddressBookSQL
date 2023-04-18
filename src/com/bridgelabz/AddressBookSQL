@@ -125,4 +125,47 @@ Output -> 17:50:15	insert into AddressBook(first_name,last_name,address_book_nam
            Aruna      Rawke     Relation            Family      bhagwan nagar   nanded  Maharahstra 431601   9422087822 arunarawke1@gmail.com
 
 UC12: Draw the ER Diagram for Address Book Service DB
-Output -> 
+Output -> AddressBookERDiagram.mwb
+
+UC13: Ensure all retrieve queries done especially in UC 6, UC 7, UC 8 and UC 10 are working with new table structure
+SQL Query ->
+      UC6
+      select first_name, last_name, city, state from AddressBook where city ="nanded" and state ="Maharahstra";
+
+      UC7
+      select count(city),count(state) from AddressBook where city ="pune" and state="Maharahstra";
+
+      UC8
+      select first_name from AddressBook where city ="Nanded" order by first_name asc;
+
+      UC10
+      select count(type) from AddressBook
+      where type = "Family";
+
+      select count(type) from AddressBook
+      where type = "Friend";
+
+Output -> 19:44:31	select first_name, last_name, city, state from AddressBook where city ="nanded" and state ="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+          first_name, last_name, city, state
+          'Aruna', 'Rawke', 'nanded', 'Maharahstra'
+
+          19:47:44	select count(city),count(state) from AddressBook where city ="pune" and state="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+          count(city), count(state)
+          '1'        ,      '1'
+
+          19:48:28	select first_name from AddressBook where city ="Nanded" order by first_name asc LIMIT 0, 1000	4 row(s) returned	0.016 sec / 0.000 sec
+          first_name
+          'Anjali'
+          'Apeksha'
+          'Aruna'
+
+          19:49:26	select count(type) from AddressBook            where type = "Family" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+          count(type)
+          '1'
+
+          19:49:26	select count(type) from AddressBook            where type = "Friend" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+          count(type)
+          '1'
+
+
+
