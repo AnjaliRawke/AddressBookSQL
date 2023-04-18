@@ -2,9 +2,9 @@ UC1: Ability to create a Address Book Service DB
 SQL Query -> create database AddressBook;
 Output -> 15:51:56	create database AddressBook	1 row(s) affected	0.016 sec
 
- UC2: Ability to create a Address Book Table with first names,last names, address, city,state, zip, phone number and email as its attributes.
- SQL Query -> use AddressBook;
- create table AddressBook(first_name varchar(30) not null,
+UC2: Ability to create a Address Book Table with first names,last names, address, city,state, zip, phone number and email as its attributes.
+SQL Query -> use AddressBook;
+create table AddressBook(first_name varchar(30) not null,
                            last_name varchar(30) not null,
 						   address varchar(30),
                            city varchar(30),
@@ -15,4 +15,21 @@ Output -> 15:51:56	create database AddressBook	1 row(s) affected	0.016 sec
 Output -> 16:07:08	use AddressBook	0 row(s) affected	0.000 sec
 
           16:07:08	create table AddressBook(first_name varchar(30) not null,                            last_name varchar(30) not null,          address varchar(30),                            city varchar(30),                            state varchar(30),          zip int,                            phone_number long,          email varchar(40))	0 row(s) affected	0.015 sec
+
+UC3:Ability to insert new Contacts to Address Book
+SQL Query -> insert into AddressBook(first_name,last_name,address,city,state,zip,phone_number,email)value
+                                      ("Anjali","Rawke","Bhagwant Nagar","Nanded","Maharshtra",431605,7058162286,"anjalirawke21@gmail.com"),
+                                      ("Apeksha","patil","Anand Nagar","Nanded","Maharashtra",431605,9011100740,"apekshapatil@gmail.com"),
+                                      ("Pranjali","Rawke","dhayari","pune","Maharahstra",411041,8275196505,"pranjalirawke1@gmail.com"),
+                                      ("Rani","Gupta","Nerul","Mumbai","Maharashtra",400706,9423561120,"ranigupta@gmail.com");
+                 select * from AddressBook;
+Output -> 16:19:48	insert into AddressBook(first_name,last_name,address,city,state,zip,phone_number,email)value                                       ("Anjali","Rawke","Bhagwant Nagar","Nanded","Maharshtra",431605,7058162286,"anjalirawke21@gmail.com"),                                       ("Apeksha","patil","Anand Nagar","Nanded","Maharashtra",431605,9011100740,"apekshapatil@gmail.com"),                                       ("Pranjali","Rawke","dhayari","pune","Maharahstra",411041,8275196505,"pranjalirawke1@gmail.com"),                                       ("Rani","Gupta","Nerul","Mumbai","Maharashtra",400706,9423561120,"ranigupta@gmail.com")	4 row(s) affected Records: 4  Duplicates: 0  Warnings: 0	0.047 sec
+
+          16:19:55	select * from AddressBook LIMIT 0, 1000	4 row(s) returned	0.000 sec / 0.000 sec
+
+          first_name last_name  address         city    state       pincode  phone no    email
+          Anjali	 Rawke	    Bhagwant Nagar	Nanded	Maharshtra	431605	 7058162286	anjalirawke21@gmail.com
+          Apeksha	 patil	    Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
+          Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+          Rani	     Gupta	    Nerul	        Mumbai	Maharashtra	400706	 9423561120	ranigupta@gmail.com
 
