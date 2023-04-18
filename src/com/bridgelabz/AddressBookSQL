@@ -45,3 +45,14 @@ Output -> 16:34:18	update AddressBook set phone_number =9423015745 where first_n
           Apeksha	 patil	    Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
           Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
           Rani	     Gupta	    Nerul	        Mumbai	Maharashtra	400706	 9423561120	ranigupta@gmail.com
+
+UC5: Ability to delete a person using person's name
+SQL Query -> delete from AddressBook where first_name="Rani";
+select * from AddressBook;
+
+Output -> 16:40:06	delete from AddressBook where first_name="Rani"	1 row(s) affected	0.016 sec
+
+           first_name last_name  address         city    state       pincode  phone no    email
+           Anjali	 Rawke	    Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
+           Apeksha	 patil	    Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
+           Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
