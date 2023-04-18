@@ -167,5 +167,3 @@ Output -> 19:44:31	select first_name, last_name, city, state from AddressBook wh
           count(type)
           '1'
 
-
-
