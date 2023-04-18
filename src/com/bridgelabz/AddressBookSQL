@@ -70,3 +70,11 @@ SQL Query -> select count(city),count(state) from AddressBook where city ="pune"
 Output -> 16:56:42	select count(city),count(state) from AddressBook where city ="pune" and state="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.015 sec / 0.000 sec
 
           '1','1
+
+UC8: Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+SQL Query -> select first_name from AddressBook where city ="Nanded" order by first_name asc;
+
+Output -> 17:03:24	select first_name from AddressBook where city ="Nanded" order by first_name asc LIMIT 0, 1000	3 row(s) returned	0.015 sec / 0.000 sec
+
+          'Anjali'
+          'Apeksha'
