@@ -33,3 +33,15 @@ Output -> 16:19:48	insert into AddressBook(first_name,last_name,address,city,sta
           Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
           Rani	     Gupta	    Nerul	        Mumbai	Maharashtra	400706	 9423561120	ranigupta@gmail.com
 
+UC4 : Ability to edit existing contact person using their name
+SQL Query -> SET SQL_SAFE_UPDATES = 0;
+update AddressBook set phone_number =9423015745 where first_name ="Anjali";
+select * from AddressBook;
+
+Output -> 16:34:18	update AddressBook set phone_number =9423015745 where first_name ="Anjali"	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.016 sec
+
+          first_name last_name  address         city    state       pincode  phone no    email
+          Anjali	 Rawke	    Bhagwant Nagar	Nanded	Maharshtra	431605	 9423015745	anjalirawke21@gmail.com
+          Apeksha	 patil	    Anand Nagar	    Nanded	Maharashtra	431605	 9011100740	apekshapatil@gmail.com
+          Pranjali	 Rawke	    dhayari	        pune	Maharahstra	411041	 8275196505	pranjalirawke1@gmail.com
+          Rani	     Gupta	    Nerul	        Mumbai	Maharashtra	400706	 9423561120	ranigupta@gmail.com
