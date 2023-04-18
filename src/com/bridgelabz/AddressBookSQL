@@ -63,3 +63,10 @@ SQL Query -> select  first_name from AddressBook where city ="pune" and state ="
 Output -> 16:49:32	select  first_name from AddressBook where city ="pune" and state ="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
 
           'Pranjali'
+
+UC7: Ability to understand the size of address book by City and State
+SQL Query -> select count(city),count(state) from AddressBook where city ="pune" and state="Maharahstra";
+
+Output -> 16:56:42	select count(city),count(state) from AddressBook where city ="pune" and state="Maharahstra" LIMIT 0, 1000	1 row(s) returned	0.015 sec / 0.000 sec
+
+          '1','1
